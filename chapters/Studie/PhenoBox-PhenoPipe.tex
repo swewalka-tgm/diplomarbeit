@@ -1,0 +1,32 @@
+\section{PHENOBox}
+As part of our collaboration with the Vienna Bio Center, we were provided with the so-called PHENOBox as a product environment. The PHENOBox is a flexible solution for plant phenotyping research using image data. During the course of our diploma project, the PHENOBox will be equipped with 2 high-frequency microphones. \cite{czedik-eysenberg_phenobox_2018}
+
+\subsection{Technical Specifications}
+The PHENOBox has a height of 75.5 cm, a width of 50 cm, and a length of 82 cm (side) + 4 cm (door handle). It weighs approximately 15 kg. The imaging area is suitable for plants with a maximum shoot size of about 20 cm in width and 40 cm in height. \cite{czedik-eysenberg_phenobox_2018}
+
+The camera can be adjusted in height to achieve a centered position on the shoot for imaging. A Canon SLR camera (700D) is installed in the PHENOBox for easy operation and high image quality. \cite{czedik-eysenberg_phenobox_2018}
+
+The homogeneous illumination of the imaging area is achieved by 7 LED panels, two on each side of the image axis (vertical) and three (horizontal) above the shoot imaging area. \cite{czedik-eysenberg_phenobox_2018}
+
+\section{PHENOPipe}
+PhenoPipe is an open-source analysis platform for managing and evaluating samples that complements the hardware of the PhenoBox. It allows for the automation of image processing and data analysis and provides a web interface for managing phenotyping projects. The entire code for PHENOBox and PHENOPipe is located in a public Github repository. \cite{czedik-eysenberg_phenobox_2018}
+
+\textbf{The code consists of the following components:}
+
+\subsection{Phenobox}
+Code for the Phenobox itself, which runs on a Raspberry Pi 3.\newline
+Captures images and interacts with the Phenopipe server.
+
+\subsection{PhenoPipe Web}
+Main server with database and web interface.\newline
+Written in Python with Flask and TypeScript with Angular.\newline
+Manages experiments, labels, analyses, etc.
+
+\subsection{PhenoPipe Postprocess Server}
+A Java-GRPC server for postprocessing analysis data with R scripts.\newline
+Setup instructions
+
+\subsection{Phenopipe IAP Server}
+A Java-GRPC server for interacting with the IAP (Image Analysis Pipeline).
+
+Although the PHENOPipe has many features that could be potentially useful for our project the complexity and the lack of maintenance could bring more disadvantages than benefits.

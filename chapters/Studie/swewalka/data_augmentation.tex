@@ -1,0 +1,20 @@
+\subsection{Data Augmentation}
+Data augmentation is a technique designed to enhance the performances of a machine learning model by introducing artificial diversity into the training dataset. This is through applying different transformations not varied in the meaning of data and, therefore, the augmented data will still be associated with the same labels. This can be particularly beneficial in such areas where it is either complex or expensive to gather a huge dataset that is diverse. \cite{salamon_deep_2017}
+
+Data augmentation in sound classification happens in many different ways and forms, with a nod towards the special nature of audio data. Some important methods of audio data augmentation include the following:
+
+\begin{itemize}
+    \item \textbf{Time Stretching (TS):}
+    involves a process that makes audio samples play slower or faster without altering pitch. This may be beneficial to the model in terms of an invariance to the duration changes of sound events, which is very important in detecting sounds that might have occurred at different speeds.\cite{salamon_deep_2017}
+
+    \item \textbf{Pitch Shifting (PS):} 
+    This technique perturbs the pitch of the audio sample without changing its duration. The variation in pitch is naturally occurring as usually it occurs in varying environments; sounds of the same nature can have slightly differing pitches. \cite{salamon_deep_2017}
+    
+    \item \textbf{Dynamic Range Compression (DRC):} 
+    This is a technique used to reduce the level difference between the loud and quiet portions of an audio signal. This will condition the dynamic range to be in uniformity; hence, the model can work well on recordings with varying degrees of loudness and dynamic range using different sets of compression.\cite{salamon_deep_2017}
+    
+    \item \textbf{Background Noise (BG):} 
+    This refers to the original audio samples mixed with various background noises, such as sounds from the street or the park. This helps make the model resistant to environmental noise. This is an important consideration given that the applications in real-world scenarios are such that contain the target sounds mostly mixed with irrelevant background sounds.\cite{salamon_deep_2017}
+\end{itemize}
+    
+All of these augmentations are applied directly to the audio signal before conversion into a spectrogram or any other representation used for the training of the network. Parameters for each augmentation should be chosen carefully to preserve the original semantic meaning of the audio. Although these data augmentation techniques have often improved the robustness and accuracy of sound classifiation models in different use cases, there is no evidence to this time that the mentioned methods can yield to better results in ultrasonic sound classification emitted by plants.

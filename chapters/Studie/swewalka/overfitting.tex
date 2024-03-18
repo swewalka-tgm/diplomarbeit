@@ -1,0 +1,6 @@
+\subsection{Overfitting}
+One of the most problematic issue for CNN's and deep learning parctices in general is overfitting, meaning the model learns the training data too perfectly with all its details to the detriment of its performance in new, not seen data. Overfitting leads to losing the ability of the model to generalize well, hence rendering poor predictions on data not seen before.
+
+In essence, overfitting means that the model is capturing noise or random fluctuations in the training data, instead of the underlying pattern that it is meant to learn. This occurs when a model is too complex, with too many parameters relative to the amount of training data. A very complex model tries to make the training data fit very closely but fails utterly in generalizing the new data; in other words, a very accurate model on the training data, but loses its accuracy when dealing with new data.
+
+Detection of overfitting can be done by the comparing the performance of the model on the training dataset to another test dataset. Overfitting would be a clear case if the training set accuracy was very high and the test set accuracy much lower. Splitting the provided initial data set to separate the training and test sub-samples would thus help in approximating the model's performance on new data, hence the existence of potential overfitting.

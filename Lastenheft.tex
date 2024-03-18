@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{csquotes}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+\usepackage[toc]{glossaries}
+
+\makeglossaries
+
+\newacronym{gf}{GF}{Geiblinger Fabian}
+\newacronym{kj}{KJ}{Kropatschek Julian}
+\newacronym{ps}{PS}{Puschmann Simon}
+\newacronym{sj}{SJ}{Szuecs Jacab}
+\newacronym{ws}{WS}{Wewalka Simon}
+
+\newglossaryentry{PHENOBox}
+{
+    name=PHENOBox,
+    description={Ein geschlossener Schrank oder Zelt in dem Pflanzen gezüchtet werden}
+    \newline
+    https://www.overleaf.cohttps://www.overleaf.com/project/646f54b3b94ac407ecd46406m/project/646f54b3b94ac407ecd46406
+}
+\newcommand{\zuchtschrankref}[1]{\text{\glslink{Zuchtschrank}{#1}}}
+
+\newglossaryentry{dB SPL}
+{
+    name=dB SPL, 
+    description={Maßeinheit zur Messung des Schalldrucks (der Lautstärke) von Schall}
+}
+
+\newglossaryentry{Studie}
+{
+    name=Studie,
+    description={https://www.cell.com/cell/fulltext/S0092-8674(23)00262-3}
+}
+
+\newglossaryentry{Neuronales Netzwerk}
+{
+    name=Neuronales Netzwerk,
+    description={Ein künstliches Modell, das auf dem Funktionsprinzip des menschlichen Gehirns basiert und aus miteinander verbundenen künstlichen Neuronen besteht. Es wird verwendet, um komplexe Berechnungen und Mustererkennungsaufgaben durchzuführen, indem es Daten verarbeitet und daraus Erkenntnisse oder Vorhersagen generiert}
+}
+
+\newglossaryentry{Metadaten}
+{
+    name=Metadaten,
+    description={Metadaten sind Daten, die Informationen über andere Daten liefern. Sie beschreiben die Eigenschaften und den Kontext anderer Daten, um deren Verwaltung, Nutzung und Verständnis zu erleichtern.}
+}
+\newcommand{\neuronalref}[1]{\text{\glslink{Neuronales Netzwerk}{#1}}}
+
+\newglossaryentry{Forschungsbericht}
+{
+    name=Forschungsbericht,
+    description={Schriftliche Dokumentation einer wissenschaftlichen Untersuchung, welche die Ergebnisse, Methoden und Schlussfolgerungen einer Forschungsarbeit zusammenfasst}
+}
+\newcommand{\Forschungsberichtref}[1]{\text{\glslink{Forschungsbericht}{#1}}}
+
+\newglossaryentry{Klassifizierung}
+{
+    name=Klassifizierung,
+    description={Im Zusammenhang mit Daten für neuronale Netzwerke bezeichnet "Klassifizierung" die Zuordnung einer bestimmten Dateninstanz zu einer spezifischen Kategorie oder Klasse. Sie dient dazu, neuronale Netzwerke zu trainieren und zu evaluieren, um Aufgaben wie Objekterkennung, Kategorisierung oder Sentiment-Analyse durchzuführen}
+}
+\newcommand{\Klassifizierungref}[1]{\text{\glslink{Klassifizierung}{#1}}}
+
+\title{Diplomarbeit - Lastenheft}
+\author{
+  Geiblinger Fabian
+  \and Kropatschek Julian
+  \and Puschmann Simon
+  \and Szuecs Jacob
+  \and Wewalka Simon
+}
+\date{28.05.2023}
+\begin{document}
+
+%Deckblatt
+\maketitle
+
+%\clearpage
+\vspace*{\fill}
+
+
+
+\begin{center}
+    \section*{Änderungshistorie}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+  \centering
+  Datum & Autor(en) & Änderung & Version \\
+  \hline
+  15.05.2023 & \acrshort{gf}, \acrshort{kj}, \acrshort{ps}, \acrshort{sj}, \acrshort{ws} & Dokument erstellt & 0.1 \\
+  20.05.2023 & \acrshort{gf}, \acrshort{kj}, \acrshort{ps}, \acrshort{sj}, \acrshort{ws} & Überarbeitung & 0.2 \\
+  28.05.2023 & \acrshort{gf}, \acrshort{kj}, \acrshort{ps}, \acrshort{sj}, \acrshort{ws} & Draft 1 Fertigstellung & 1.0\\
+  01.06.2023 & \acrshort{kj}, \acrshort{ps} & Fertigstellung & 2.0\\
+  01.06.2023 & \acrshort{ps} & Anpassung an PHENOPlant & 2.1\\
+  08.09.2023 & \acrshort{gf}, \acrshort{kj}, \acrshort{ps}, \acrshort{sj}, \acrshort{ws} & Anpassung an PHENOPlan & 2.2\\
+  11.09.2023 & \acrshort{gf}, \acrshort{kj}, \acrshort{ps}, \acrshort{sj}, \acrshort{ws} & Überarbeitung der Methodik & 2.3\\
+  12.09.2023 & \acrshort{gf}, \acrshort{kj}, \acrshort{ps}, \acrshort{sj}, \acrshort{ws} & Überarbeitung für Diplomarbeitsbeginn & 2.4\\
+  \hline
+\end{tabular}
+\end{center}
+
+
+\clearpage
+
+%Inhaltsangabe
+\tableofcontents
+\clearpage
+
+
+
+
+% Content
+\section{Einführung}
+     Im Rahmen des vorliegenden Projekts soll in Kollaboration mit der Plants Facility des Vienna-BioCenters ein neuartiges Werkzeug zur weiteren Erforschung von Pflanzenstress entwickelt werden. Eine kürzlich von Cell veröffentlichte \Gls{Studie} hat gezeigt, dass bestimmte Pflanzen unter Stress hochfrequente Klickgeräusche erzeugen können. Dieses Phänomen bildet die Grundlage für diese Diplomarbeit.
+
+\section{Zielbestimmung}
+    Die grundsätzliche Zielsetzung des Forschungsprojektes ist es, ein System zu entwickeln, das möglichst autonom Daten diverser Pflanzen aufzeichnet, von Störgeräuschen differenziert und klassifizieren kann. Hierzu soll die bereits bestehende \Gls{PHENOBox} um zwei Ultraschallmikrofone erweitert werden. Teil der technischen Umsetzung ist weiters die Entwicklung von Software mit deren Hilfe Umgebungsgeräusche heraus-gefiltert werden, und die einzelnen Töne mit \Gls{Metadaten} gespeichert werden können.
+\clearpage
+    
+\section{Produkteinsatz}
+    Die erweiterte \Gls{PHENOBox} soll Forscher:innen zur Verfügung stehen, um neuartige Erkenntnisse im weitestgehend unerforschten Gebiet der Pflanzenakustik zu schaffen. Hierzu ist es wesentlich, dass die Aufzeichnungen und Auswertungen der Daten möglichst wenig technische Expertise von Seite der Forscher:innen benötigt. 
+ \clearpage
+
+\section{Die bessere Methodik}
+    \subsection{Ultraschall aufnehmen} 
+    \subsection{Filtern der Daten}
+    \subsection{Speichern der Daten}
+    \subsection{Datenverarbeitung}
+    \subsection{Bereitstellen der Ergebnisse}
+ 
+\section{Methodik}
+    \subsection{Stressen der Pflanze}
+        Um die verbesserte \Gls{PHENOBox} zu testen ist es notwendig Pflanzen zu züchten, sowie diese zu Stressen. Trockenheitsstress ist dafür am besten geeignet, da dieser einfach zu kontrollieren ist.
+
+    \subsection{Erstellung einer isolierten Messungsumgebung}
+        Zur Minimierung von unkontrollierbaren Variablen ist eine isolierte Messungssumgebung wesentlich. Hierfür soll die \Gls{PHENOBox} zum Einsatz kommen. Eine der wichtigsten Faktoren für unsere Messungen ist die Störungsgeräusch Miniminerung. Es gilt die Störgeräusche im Bereich 20-120kHz durch potenzielle äußerliche Einflüsse zu minimieren. Dafür werden die  Metallwände der \Gls{PHENOBox} verwendet. Zusätzlich wird die Innenseite der Box mit Akustik Schaumstoff ausgekleidet um zusätzliche Schallisolierung zu gewährleisten und das Echo im Innenraum der \Gls{PHENOBox} zu minimieren. 
+    \subsection{Mikrofone}
+        Um die hochfrequenten Klick-Geräusche gezielt messen zu können, wird ein Mikrofon benötigt, welches unsere technischen Bedingungen erfüllt:
+        %unorderes list
+        \begin{itemize}
+            \item Frequenzreichweite von 20kHz bis 100kHz
+            \item Sensibilität hoch genug für 60 dBSPL
+        \end{itemize}
+    \subsection{Messungen}
+        Es ist nötig mehrere Messungen abzunehmen um die Funktionalität der Mikrofone zu testen und möglichst zu optimieren. Außerdem muss getestet werden welche Mikrofone für diesen Einsatz zu gebrauchen sind im Zusammenhang mit den in Unterpunkt 4.2 genannten technischen Eckdaten.
+    \subsection{Auswertung der Daten} 
+        \subsubsection{Aufbereitung der Daten}
+        Damit die gemessenen Daten sinnvoll weiterverwendet werden können, müssen diese aufbereitet und auf Sinnhaftigkeit geprüft werden.
+        \subsubsection{Datenbank}
+        Die gemessenen Daten werden in einer Datenbank abgespeichert und für weitere Auswertungen zur Verfügung gestellt. Hierfür ist sinnvolle \Gls{Klassifizierung} und Kategorisierung wesentlich.
+    
+\section{Daten}
+    \subsection{Mikrofondaten}
+    Die ermittelten Mikrofondaten werden gespeichert, um diese sortiert und gelistet für Forscher:innen darzustellen, um überflüssige Arbeit für diese zu sparen.
+    \subsection{Sensordaten-Bilder}
+    Die zu den Mikrofondaten aufgezeichneten Bilder werden benötigt, um den Forscher:innen weitere Daten, mit welchen gearbeitet werden können bereitzustellen. 
+    \subsection{Pflanzendaten}
+    Alle verschieden Pflanzen werden mit QR-Codes am Topf versehen, damit eine eindeutige Identifikation jeder Pflanze möglich ist. Dies ist vor allem nötig um ein geordnetes System zu schaffen, mit dem man ohne Mehraufwand forschen kann.
+    
+\section{Vertragsgegenstand}
+Am Ende des Projekts soll die verbesserte / überarbeitete \Gls{PHENOBox} mit eingebauten Mikrofonen, sowie die dazu benötigte Software vorgestellt werden. Die dabei gewonnen Erkentnisse / ausgewerteten Daten werden ebenfalls bereitgestellt.  
+
+\clearpage
+
+\setglossarystyle{listhypergroup}
+% Style options: list, altlist, listgroup, listhypergroup
+
+\printglossaries
+
+
+\end{document}

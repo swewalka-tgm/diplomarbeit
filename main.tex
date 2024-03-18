@@ -1,0 +1,68 @@
+\documentclass[minted, en]{thesis}
+\usepackage{parskip}
+\usepackage{textcomp}
+\usepackage{tablefootnote}
+\usepackage{appendix}
+%Advanced Hyphonation
+\usepackage{microtype}
+
+% Required
+\title{Plant Whispers}
+% Authors
+\author{Simon Puschmann}{5AHIT}{Elektronik Sensor und Messtechnik}
+\author{Jacob Szücs}{5AHIT}{Filtern und vorbereiten der Daten}
+\author{Fabian Geiblinger}{5AHIT}{Speichern und Zuweisen der Daten}
+\author{Simon Wewalka}{5AHIT}{Auswerden der Daten}
+\author{Julian Kropatschek}{5AHIT}{Benutzeroberfläche}
+% Date of submission
+\date{4. April 2023}
+% Optional
+\mysubtitle{}
+\myteacher{Dipl. Ing. Roland Strohmer}
+\myyear{2023/24}
+\mydivision{Systemtechnik}
+\selectlanguage{english}			% Set language to english
+% \selectlanguage{ngerman}			% Set language to german
+% \setcode{frame=single} 			% Add a frame to codes
+% \setcode{bgcolor=AlmostWhite}		% Add a background to codes (minted only)
+% \usemintedstyle{rainbow_dash} 	% autumn, rainbow_dash, tango (default), trac
+\begin{document}
+\input{chapters/kurzfassung}
+% Table of contents
+\tableofcontents\glsresetall
+\newpage\pagestyle{fancy}
+
+\include{chapters/danksagung}
+\include{chapters/vorwort} 			% Include the chapter „Vorwort“
+\include{chapters/vorwort/quellen}	% Include a section of a chapter
+\include{chapters/Einleitung/einleitung}
+
+%STUDIE
+\include{chapters/Studie/studie}
+\include{chapters/Studie/Phänotyp}
+\include{chapters/Studie/Pflanzenstress}
+\include{chapters/Studie/pflanzengeraeusche
+\include{chapters/Studie/PhenoBox-PhenoPipe}
+\include{chapters/Studie/swewalka/introduction}
+\include{chapters/Studie/swewalka/classifier}
+\include{chapters/Studie/swewalka/overfitting}
+\include{chapters/Studie/swewalka/data_augmentation}
+\include{chapters/Studie/swewalka/feature_detection}
+
+% KONZEPT
+\include{chapters/Konzept/konzept}
+
+% IMPLEMENTIERUNG
+\include{chapters/Implementierung/implementierung}
+
+\include{chapters/retrospektive}
+\include{chapters/conclusio}
+\include{chapters/Litaraturverzeichnis}
+
+\begin{appendices}
+\chapter{Calculation of microphone sensitivity}
+\section{Understanding microphone sensitivity}
+\end{appendices}
+
+% \glsaddall	% Also list unused glossary entries
+\end{document}
